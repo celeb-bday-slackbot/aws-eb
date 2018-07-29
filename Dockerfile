@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y curl apt-transport-https && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install -y yarn
 
-# Create app directory
+# Create app directoryㄴ
 WORKDIR /usr/src/app
 
 # Install app dependencies
@@ -16,6 +16,6 @@ COPY . .
 
 RUN yarn install
 
-#EXPOSE 3000
+EXPOSE 3000
 
 CMD [ "yarn", "start" ]
